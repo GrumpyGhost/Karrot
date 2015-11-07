@@ -1,3 +1,4 @@
+@import "../normalize.css";
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800);
 /* Base
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -56,7 +57,7 @@ h6 {
   letter-spacing: 0;
 }
 /* Larger than mobile */
-@media (min-width: 550px) {
+@media (min-width: 480px) {
   h1 {
     font-size: 5.0rem;
   }
@@ -223,7 +224,7 @@ label > .label-body {
 /* Lists
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 ul {
-  list-style: circle inside;
+  list-style: none;
 }
 ol {
   list-style: decimal inside;
@@ -334,17 +335,90 @@ hr {
 }
 .img-responsive {
   max-width: 100%;
+  height: auto;
+  margin: 0 auto;
 }
-.inline-ul li {
+/* Nav
+--------------------------------------*/
+.navbar {
+  background-color: #0C1530;
+  height: 60px;
+  width: 100%;
+  line-height: 60px;
+}
+.navbar span {
+  display: none;
+}
+.navbar [class*="container-"] .logo {
+  text-decoration: none;
+  color: #F5F2F8;
+  font-size: 18px;
+}
+.navbar [class*="container-"] ul:not(#mobile) {
+  list-style: none;
+}
+.navbar [class*="container-"] ul:not(#mobile) li {
   display: inline-block;
-  margin: 0 10px 0 10px;
+}
+.navbar [class*="container-"] ul:not(#mobile) li a {
+  text-decoration: none;
+  padding: 10px;
+  color: #F5F2F8;
+  transition: 0.3s;
+}
+.navbar [class*="container-"] ul:not(#mobile) li a:hover {
+  color: #89A7CF;
+  transition: 0.3s;
+}
+.navbar #mobile {
+  display: none;
+}
+@media (max-width: 750px) {
+  .navbar span {
+    display: block;
+    line-height: 60px;
+    color: #fff;
+    font-size: 24px;
+    transition: 0.3s;
+  }
+  .navbar span:hover {
+    cursor: pointer;
+    color: #89A7CF;
+    transition: 0.3s;
+  }
+  .navbar [class*="container-"] ul:not(#mobile) {
+    display: none;
+  }
+  .navbar #mobile {
+    list-style: none;
+    background-color: #0C1530;
+    height: 50px;
+    width: 100%;
+    color: #F5F2F8;
+  }
+  .navbar #mobile li {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    border-bottom: 1px solid #1B243E;
+    transition: 0.3s;
+  }
+  .navbar #mobile li:hover {
+    background-color: #1B243E;
+    transition: 0.3s;
+  }
+  .navbar #mobile li a {
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+  }
 }
 .container-960,
 .container-1200 {
   position: relative;
   width: 80%;
   margin: 0 auto;
-  padding: 0 50px 50px 50px;
+  padding: 0 20px;
   box-sizing: border-box;
 }
 .container-1200 {
@@ -354,12 +428,14 @@ hr {
   max-width: 960px;
 }
 .col {
-  padding: 0;
   float: left;
   box-sizing: border-box;
 }
 .col:first-child {
-  margin-left: 0;
+  padding-left: 0;
+}
+.col:last-child {
+  padding-right: 0;
 }
 .one.col {
   width: 8.33333333%;
@@ -433,7 +509,7 @@ hr {
 .offset-twelve {
   margin-left: 100%;
 }
-@media (max-width: 750px) {
+@media (max-width: 768px) {
   .container-1200,
   .container-960 {
     width: 85%;
@@ -473,18 +549,22 @@ hr {
   }
   .tablet-twelve.col {
     width: 100%;
+    margin: 0;
+    padding: 0;
   }
   [class*="offset-"] {
     margin-left: 0;
   }
 }
-@media (max-width: 550px) {
+@media (max-width: 480px) {
   .container-1200,
   .container-960 {
     width: 100%;
   }
   .col {
     width: 100% !important;
+    padding: 0;
+    margin: 0;
   }
 }
 .container:after,
