@@ -45,3 +45,15 @@ Karrot responsive web css framework
 <div class="container-fluid"></div>
 //max-width:100%;
 ```
+
+####Responsive Image
+```HTML
+<img class="image-responsive" src="#" alt="">
+```
+
+####RWD Hide
+```HTML
+<img class="tablet-hide" src="#" alt="">
+
+<img class="mobile-hide" src="#" alt="">
+```
