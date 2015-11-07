@@ -1,16 +1,17 @@
-### Karrot
+# Karrot CSS
 Karrot responsive web css framework
 ## Documentation
-#Containers
+###Containers
 ```HTML
 <div class="container-960">
 ...
 </div>
+
 <div class="container-1200">
 ...
 </div>
 ```
-#Navbar
+###Navbar
 ```HTML
 <div class="navbar">
   <div class="container-960">
