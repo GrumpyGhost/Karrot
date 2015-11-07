@@ -1,8 +1,32 @@
+@import "Variables.less";
+/* Utilities
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+[class$="-full"] {
+  width: 100%;
+  box-sizing: border-box; }
+[class$="-fluid"] {
+  max-width: 100%;
+  box-sizing: border-box; }
+.pull-right {
+  float: right; }
+.pull-left {
+  float: left; }
+
 .img-responsive {
   max-width: 100%;
   height: auto;
   margin: 0 auto;
 }
+/* RWD Show/Hide
+-----------------------------------------*/
+@media(max-width: @TabletScreen){
+  .tablet-hide {display: none;}
+}
+
+@media(max-width: @MobileScreen){
+  .mobile-hide {display: none;}
+}
+
 /* Nav
 --------------------------------------*/
 .navbar{
