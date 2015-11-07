@@ -11,6 +11,23 @@ Karrot responsive web css framework
 ...
 </div>
 ```
+###Columns
+```HTML
+<div class="row">
+  <div clas="col six">
+    <div>
+      ...
+    </div>
+  </div>
+  <div clas="col six">
+    <div>
+      ...
+    </div>
+  </div>
+</div>
+
+etc.
+```
 ###Navbar
 ```HTML
 <div class="navbar">
