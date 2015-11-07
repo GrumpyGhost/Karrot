@@ -39,7 +39,9 @@ Karrot responsive web css framework
 ```
 ####Width modifiers
 ```HTML
-<div class="full-width"></div>
+<div class="container-full"></div>
+//width:100%;
 
-<div class="max-full-width"></div>
+<div class="container-fluid"></div>
+//max-width:100%;
 ```
