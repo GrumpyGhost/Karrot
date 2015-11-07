@@ -16,8 +16,8 @@ Karrot responsive web css framework
 <div class="navbar">
   <div class="container-960">
     <a class="logo" href="#">Random Logo</a>
-    <span onclick="toggle()" class='fa fa-bars u-pull-right'></span>
-    <ul class="u-pull-right">
+    <span onclick="toggle()" class='fa fa-bars pull-right'></span>
+    <ul class="pull-right">
       <li><a href="#">Test</a></li>
       <li><a href="#">Test</a></li>
       <li><a href="#">Test</a></li>
