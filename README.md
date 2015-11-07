@@ -50,9 +50,9 @@ etc.
 ###Utilities
 ####Positioning
 ```HTML
-<a class="pull left" href="#"></a>
+<a class="pull-left" href="#"></a>
 
-<a class="pull right" href="#"></a>
+<a class="pull-right" href="#"></a>
 ```
 ####Width modifiers
 ```HTML
