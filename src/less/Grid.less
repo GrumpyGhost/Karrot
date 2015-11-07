@@ -1,15 +1,13 @@
 @import "Variables.less";
 
-.container-960, .container-1200, .container {
+[class^="container"] {
   position: relative;
   width: 80%;
   margin: 0 auto;
   padding: 0 20px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  max-width: 1200px; }
 
-.container-1200 {
-  max-width: 1200px;
-}
 
 .container-960 {
   max-width: 960px;
@@ -18,10 +16,9 @@
 .col {
   float: left;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-.col:first-child {padding-left: 0;}
-.col:last-child {padding-right: 0;}
-
 .one.col {width: 100%*(1/12);}
 .two.col {width: 100%*(2/12);}
 .three.col {width: 100%*(3/12);}
@@ -50,7 +47,7 @@
 .offset-twelve {margin-left: 100%*(12/12);}
 
 @media(max-width: @TabletScreen){
-  .container-1200, .container-960 {width: 85%;}
+  [class^="container"] {width: 85%;}
   .tablet-one.col {width: 100%*(1/12);}
   .tablet-two.col {width: 100%*(2/12);}
   .tablet-three.col {width:100%*(3/12);}
@@ -72,7 +69,7 @@
   [class*="offset-"]:not(.mobile-block) {
     margin-left: 0;
   }
-  .container-1200, .container-960 {width: 100%;}
+  [class^="container"] {width: 100%;}
   .col:not(.mobile-block){
     width: 100% !important;
     padding: 0;
