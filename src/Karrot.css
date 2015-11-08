@@ -299,22 +299,6 @@ ol,
 form {
   margin-bottom: 2.5rem;
 }
-/* Utilities
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.u-full-width {
-  width: 100%;
-  box-sizing: border-box;
-}
-.u-max-full-width {
-  max-width: 100%;
-  box-sizing: border-box;
-}
-.u-pull-right {
-  float: right;
-}
-.u-pull-left {
-  float: left;
-}
 /* Misc
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 hr {
@@ -333,10 +317,38 @@ hr {
   display: table;
   clear: both;
 }
+/* Utilities
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+[class$="-full"] {
+  width: 100%;
+  box-sizing: border-box;
+}
+[class$="-fluid"] {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
 .img-responsive {
   max-width: 100%;
   height: auto;
   margin: 0 auto;
+}
+/* RWD Show/Hide
+-----------------------------------------*/
+@media (max-width: 768px) {
+  .tablet-hide {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .mobile-hide {
+    display: none;
+  }
 }
 /* Nav
 --------------------------------------*/
@@ -413,155 +425,146 @@ hr {
     text-align: center;
   }
 }
-.container-960,
-.container-1200 {
+[class^="container"] {
   position: relative;
   width: 80%;
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box;
-}
-.container-1200 {
   max-width: 1200px;
 }
 .container-960 {
   max-width: 960px;
 }
-.col {
+[class^="col-"] {
   float: left;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-.col:first-child {
-  padding-left: 0;
-}
-.col:last-child {
-  padding-right: 0;
-}
-.one.col {
+.col-1 {
   width: 8.33333333%;
 }
-.two.col {
+.col-2 {
   width: 16.66666667%;
 }
-.three.col {
+.col-3 {
   width: 25%;
 }
-.four.col {
+.col-4 {
   width: 33.33333333%;
 }
-.five.col {
+.col-5 {
   width: 41.66666667%;
 }
-.six.col {
+.col-6 {
   width: 50%;
 }
-.seven.col {
+.col-7 {
   width: 58.33333333%;
 }
-.eight.col {
+.col-8 {
   width: 66.66666667%;
 }
-.nine.col {
+.col-9 {
   width: 75%;
 }
-.ten.col {
+.col-10 {
   width: 83.33333333%;
 }
-.eleven.col {
+.col-11 {
   width: 91.66666667%;
 }
-.twelve.col {
+.col- {
   width: 100%;
 }
-.offset-one {
+.offset-1 {
   margin-left: 8.33333333%;
 }
-.offset-two {
+.offset-2 {
   margin-left: 16.66666667%;
 }
-.offset-three {
+.offset-3 {
   margin-left: 25%;
 }
-.offset-four {
+.offset-4 {
   margin-left: 33.33333333%;
 }
-.offset-five {
+.offset-5 {
   margin-left: 41.66666667%;
 }
-.offset-six {
+.offset-6 {
   margin-left: 50%;
 }
-.offset-seven {
+.offset-7 {
   margin-left: 58.33333333%;
 }
-.offset-eight {
+.offset-8 {
   margin-left: 66.66666667%;
 }
-.offset-nine {
+.offset-9 {
   margin-left: 75%;
 }
-.offset-ten {
+.offset-10 {
   margin-left: 83.33333333%;
 }
-.offset-eleven {
+.offset-11 {
   margin-left: 91.66666667%;
 }
-.offset-twelve {
+.offset-12 {
   margin-left: 100%;
 }
 @media (max-width: 768px) {
-  .container-1200,
-  .container-960 {
+  [class^="container"] {
     width: 85%;
   }
-  .tablet-one.col {
+  .tablet-1 {
     width: 8.33333333%;
   }
-  .tablet-two.col {
+  .tablet-2 {
     width: 16.66666667%;
   }
-  .tablet-three.col {
+  .tablet-3 {
     width: 25%;
   }
-  .tablet-four.col {
+  .tablet-4 {
     width: 33.33333333%;
   }
-  .tablet-five.col {
+  .tablet-5 {
     width: 41.66666667%;
   }
-  .tablet-six.col {
+  .tablet-6 {
     width: 50%;
   }
-  .tablet-seven.col {
+  .tablet-7 {
     width: 58.33333333%;
   }
-  .tablet-eight.col {
+  .tablet-8 {
     width: 66.66666667%;
   }
-  .tablet-nine.col {
+  .tablet-9 {
     width: 75%;
   }
-  .tablet-ten.col {
+  .tablet-10 {
     width: 83.33333333%;
   }
-  .tablet-eleven.col {
+  .tablet-11 {
     width: 91.66666667%;
   }
-  .tablet-twelve.col {
+  .tablet-12 {
     width: 100%;
     margin: 0;
     padding: 0;
   }
-  [class*="offset-"] {
-    margin-left: 0;
-  }
 }
 @media (max-width: 480px) {
-  .container-1200,
-  .container-960 {
+  [class*="offset-"]:not(.mobile-block) {
+    margin-left: 0;
+  }
+  [class^="container"] {
     width: 100%;
   }
-  .col {
+  [class^="col-"]:not(.mobile-block) {
     width: 100% !important;
     padding: 0;
     margin: 0;
