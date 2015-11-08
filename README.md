@@ -14,12 +14,17 @@ Karrot responsive web css framework
 ###Columns
 ```HTML
 <div class="row">
-  <div clas="col six">
+  <div clas="col-3 tablet-6 mobile-block">
     <div>
       ...
     </div>
   </div>
-  <div clas="col six">
+  <div clas="col-3 tablet-6 mobile-block">
+    <div>
+      ...
+    </div>
+  </div>
+  <div clas="col-6 tablet-12">
     <div>
       ...
     </div>
