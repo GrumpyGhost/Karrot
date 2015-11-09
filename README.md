@@ -101,11 +101,11 @@ Karrot responsive web css framework
 ```
 ####Width modifiers
 ```HTML
+<!-- width: 100% -->
 <div class="container-full"></div>
-//width:100%;
 
+<!-- max-width: 100% -->
 <div class="container-fluid"></div>
-//max-width:100%;
 ```
 
 ####Responsive Image
