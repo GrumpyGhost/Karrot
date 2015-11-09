@@ -31,7 +31,6 @@ Karrot responsive web css framework
   </div>
 </div>
 
-etc.
 ```
 ###Navbar
 ```HTML
@@ -51,6 +50,41 @@ etc.
     <li><a href="#">Test</a></li>
   </ul>
 </div>
+```
+###Buttons
+```HTML
+<!-- Standard buttons -->
+<a class="button" href="#">Button element</a>
+<button>Button element</button>
+<input type="submit" value="Button element">
+<input type="button" value="Button element">
+<!-- primary buttons -->
+<a class="button-primary" href="#">Button element</a>
+<button class="button-primary">Button element</button>
+<input class="button-primary" type="submit" value="Button element">
+<input class="button-primary" type="button" value="Button element">
+<!-- danger buttons -->
+<a class="button-danger" href="#">Button element</a>
+<button class="button-danger">Button element</button>
+<input class="button-danger" type="submit" value="Button element">
+<input class="button-danger" type="button" value="Button element">
+<!-- warrning buttons -->
+<a class="button-warrning" href="#">Button element</a>
+<button class="button-warrning">Button element</button>
+<input class="button-warrning" type="submit" value="Button element">
+<input class="button-warrning" type="button" value="Button element">
+<!-- success buttons -->
+<a class="button-success" href="#">Button element</a>
+<button class="button-success">Button element</button>
+<input class="button-success" type="submit" value="Button element">
+<input class="button-success" type="button" value="Button element">
+<!-- disabled buttons -->
+<a class="button-disabled" href="#">Button element</a>
+<button class="button-disabled">Button element</button>
+<input class="button-disabled" type="submit" value="Button element">
+<input class="button-disabled" type="button" value="Button element">
+<!-- rounded buttons -->
+<button class="button-primary rounded">Button element</button>
 ```
 ###Utilities
 ####Positioning
